@@ -5,6 +5,7 @@ socket = context.socket(zmq.REP)
 socket.bind("tcp://*:5556")
 total = 0
 
+"""Find the total account balance and sends to client"""
 while True:
     transactions = socket.recv_json()
     print(transactions)
